@@ -2,7 +2,8 @@ import React from "react";
 
 const Card = ({ name, price, currency, ram, size }) => {
   return (
-    <div className="dib ma4 grow bw2 shadow-4 br2">
+    //Renders Card
+    <div className="dib ma4 grow bw2 shadow-4 br4">
       <div>
         <h2 className="mv4">{name}</h2>
         <i class={`fas fa-${currency}-sign fa-2x`}></i>

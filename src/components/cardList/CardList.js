@@ -6,6 +6,7 @@ import { pricing } from "../../data/pricingAPI";
 const CardList = () => {
   const cardComponent = pricing.map((price) => {
     return (
+      //Renders card list with props
       <Card
         key={price.id}
         name={price.name}
