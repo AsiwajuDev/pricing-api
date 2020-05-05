@@ -1,37 +1,16 @@
-import React, { Component } from "react";
+import React from "react";
 
 import CardList from "./components/cardList/CardList";
-import SearchBox from "./components/searchBox/SearchBox";
-
-import { robots } from "./data/robot";
 
 import "./App.css";
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = { robots: robots, searchField: "" };
-  }
-
-  onSearchChange = (event) => {
-    this.setState({ searchField: event.target.value });
-  };
-
-  render() {
-    const filteredRobots = this.state.robots.filter((robots) => {
-      return robots.name
-        .toLowerCase()
-        .includes(this.state.searchField.toLowerCase());
-    });
-
-    return (
-      <div className="tc">
-        <h2 className="f1">RoboFriends</h2>
-        <SearchBox searchChange={this.onSearchChange} />
-        <CardList robots={filteredRobots} />
-      </div>
-    );
-  }
-}
+const App = () => {
+  return (
+    <div className="App">
+      <h1 className="">Pricing Plans</h1>
+      <CardList />
+    </div>
+  );
+};
 
 export default App;
